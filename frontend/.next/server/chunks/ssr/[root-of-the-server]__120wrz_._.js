@@ -1,0 +1,3 @@
+module.exports=[32618,a=>{a.v({className:"inter_c15e96cb-module__0bjUvq__className",variable:"inter_c15e96cb-module__0bjUvq__variable"})},44210,a=>{"use strict";var b=a.i(7997),c=a.i(32618);let d={className:c.default.className,style:{fontFamily:"'Inter', 'Inter Fallback'",fontStyle:"normal"}};null!=c.default.variable&&(d.variable=c.default.variable),a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{className:`${d.variable} antialiased`,children:a})})},"metadata",0,{title:"AI Memory Vault | Personal AI Knowledge OS",description:"Capture AI tools once. Recall workflows, connections and learning context forever."}],44210)},77451,a=>{a.n(a.i(44210))}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__120wrz_._.js.map
