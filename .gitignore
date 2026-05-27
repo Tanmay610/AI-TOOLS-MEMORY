@@ -5,7 +5,9 @@
 
 # Next.js output
 /.next/
+/frontend/.next/
 /out/
+/frontend/out/
 
 # production
 /build
