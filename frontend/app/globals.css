@@ -1230,10 +1230,19 @@ h3 {
 .tool-link {
   font-weight: 600;
   text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--blue);
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .tool-link:hover {
   color: var(--blue-dark);
+  text-decoration: underline;
 }
 
 .favorite {
@@ -1989,3 +1998,87 @@ h3 {
     gap: 6px;
   }
 }
+
+/* AI Live Suggestion Preview styles */
+.suggestion-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 8px 4px;
+}
+
+@keyframes spin-loader {
+  to { transform: rotate(360deg); }
+}
+
+.spin-icon {
+  animation: spin-loader 1s linear infinite;
+}
+
+.suggestion-loading svg {
+  color: var(--blue);
+}
+
+.suggestion-preview-card {
+  margin-top: 15px;
+  padding: 16px;
+  background: rgba(244, 248, 255, 0.6);
+  border: 1px solid #e1e9f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(57, 120, 246, 0.04);
+}
+
+.suggestion-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.suggestion-icon-mark {
+  height: 32px;
+  width: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  background: #eff5ff;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 650;
+  font-size: 13px;
+}
+
+.suggestion-preview-header div {
+  text-align: left;
+}
+
+.suggestion-preview-header strong {
+  font-size: 13px;
+  color: var(--ink);
+  display: block;
+}
+
+.suggestion-preview-header p {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.suggestion-preview-header .tag {
+  margin-left: auto;
+  font-size: 10px;
+  padding: 3px 7px;
+}
+
+.suggestion-preview-desc {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+}
+

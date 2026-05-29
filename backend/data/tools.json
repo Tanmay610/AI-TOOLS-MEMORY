@@ -1,0 +1,136 @@
+[
+  {
+    "name": "Wispr Flow",
+    "category": "Automation",
+    "description": "Wispr Flow connects multi-app triggers and actions into highly reliable automated tasks.",
+    "useCase": "Construct complex, multi-step notification and operational sync sequences.",
+    "role": "Workflow orchestrator",
+    "alternatives": [
+      "n8n",
+      "Zapier",
+      "Make"
+    ],
+    "related": [
+      "Operational logic",
+      "Sync triggers"
+    ],
+    "tags": [
+      "new",
+      "ai",
+      "to-review",
+      "automation",
+      "integration",
+      "workflows"
+    ],
+    "notes": "AI classification parsed. Add first impressions after testing.",
+    "importance": "High",
+    "date": "Today",
+    "viewed": "Just now"
+  },
+  {
+    "name": "Zapier",
+    "category": "Automation",
+    "description": "No-code automation platform for app-to-app actions.",
+    "useCase": "Trigger reliable business workflows across common SaaS tools.",
+    "role": "Workflow connector",
+    "alternatives": [
+      "n8n",
+      "Make"
+    ],
+    "related": [
+      "Slack",
+      "Gmail",
+      "Notion"
+    ],
+    "tags": [
+      "automation",
+      "integrations",
+      "triggers"
+    ],
+    "notes": "Compare AI action depth and cost against n8n.",
+    "importance": "Medium",
+    "date": "Today",
+    "viewed": "Just now"
+  },
+  {
+    "name": "antigravity",
+    "category": "Coding",
+    "description": "An autonomous AI coding agent designed by Google DeepMind for advanced agentic coding tasks.",
+    "useCase": "Automate complex codebase refactoring, package migrations, and fullstack debugging.",
+    "role": "Autonomous agent",
+    "alternatives": [
+      "Cursor",
+      "Devin",
+      "Aider"
+    ],
+    "related": [
+      "Gemini 3.5 Flash",
+      "Next.js",
+      "Express"
+    ],
+    "tags": [
+      "agent",
+      "coding",
+      "antigravity",
+      "deepmind"
+    ],
+    "notes": "Created by the Google DeepMind team working on Advanced Agentic Coding.",
+    "importance": "High",
+    "date": "Today",
+    "viewed": "Just now",
+    "favorite": true
+  },
+  {
+    "name": "Cursor",
+    "category": "Coding",
+    "description": "AI-native code editor with contextual project assistance.",
+    "useCase": "Navigate, edit and reason about large codebases faster.",
+    "role": "Development workspace",
+    "alternatives": [
+      "Windsurf",
+      "GitHub Copilot"
+    ],
+    "related": [
+      "MCP",
+      "Claude",
+      "GitHub"
+    ],
+    "tags": [
+      "ide",
+      "developer",
+      "pairing"
+    ],
+    "notes": "Test custom rules for team coding standards.",
+    "source": "Product Hunt",
+    "date": "May 26",
+    "importance": "High",
+    "viewed": "Just now",
+    "favorite": true
+  },
+  {
+    "name": "Perplexity",
+    "category": "Research",
+    "description": "Citation-first discovery and answer engine.",
+    "useCase": "Explore unfamiliar topics with traceable sources.",
+    "role": "Research companion",
+    "alternatives": [
+      "ChatGPT Search",
+      "Elicit"
+    ],
+    "related": [
+      "Notion",
+      "Readwise",
+      "Browser"
+    ],
+    "tags": [
+      "search",
+      "sources",
+      "discovery"
+    ],
+    "notes": "Store high-value research threads alongside source URLs.",
+    "source": "Newsletter",
+    "date": "May 25",
+    "importance": "Medium",
+    "viewed": "Yesterday"
+  }
+]
