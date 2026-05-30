@@ -17,6 +17,8 @@ import {
   Grid2x2,
   Workflow,
   TrendingUp,
+  Sun,
+  Moon,
 } from "lucide-react";
 import { Category, Section, Tool } from "./types";
 
@@ -57,12 +59,16 @@ export function Header({
   onAdd,
   search,
   onSearch,
+  theme,
+  toggleTheme,
 }: {
   active: Section;
   onNavigate: (value: Section) => void;
   onAdd: () => void;
   search: string;
   onSearch: (value: string) => void;
+  theme: "light" | "dark";
+  toggleTheme: () => void;
 }) {
   return (
     <header className="topbar">
@@ -92,6 +98,15 @@ export function Header({
             placeholder="Search tools"
           />
         </label>
+        <button 
+          className="icon-action theme-toggle" 
+          onClick={toggleTheme} 
+          aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+          title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+          style={{ cursor: "pointer" }}
+        >
+          {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+        </button>
         <button className="icon-action notification" aria-label="Notifications">
           <Bell size={18} />
           <span />

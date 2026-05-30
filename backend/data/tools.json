@@ -1,5 +1,78 @@
 [
   {
+    "name": "omi",
+    "category": "Agents",
+    "description": "omi is an AI tool captured for automatic research and enrichment.",
+    "useCase": "Investigate capabilities and map it into your AI workflow.",
+    "role": "Autonomous discovery",
+    "alternatives": [
+      "Explore alternatives",
+      "Similar tools"
+    ],
+    "related": [
+      "AI Tools",
+      "Research"
+    ],
+    "tags": [
+      "new",
+      "ai",
+      "to-review"
+    ],
+    "notes": "AI classification parsed. Add first impressions after testing.",
+    "importance": "Medium",
+    "date": "Today",
+    "viewed": "Just now"
+  },
+  {
+    "name": "gemini",
+    "category": "Agents",
+    "description": "gemini is an AI tool captured for automatic research and enrichment.",
+    "useCase": "Investigate capabilities and map it into your AI workflow.",
+    "role": "Autonomous discovery",
+    "alternatives": [
+      "Explore alternatives",
+      "Similar tools"
+    ],
+    "related": [
+      "AI Tools",
+      "Research"
+    ],
+    "tags": [
+      "new",
+      "ai",
+      "to-review"
+    ],
+    "notes": "AI classification parsed. Add first impressions after testing.",
+    "importance": "Medium",
+    "date": "Today",
+    "viewed": "Just now"
+  },
+  {
+    "name": "claude",
+    "category": "Agents",
+    "description": "Next-generation AI assistant developed by Anthropic focusing on safety and advanced reasoning.",
+    "useCase": "Execute complex cognitive workflows and write highly coherent code.",
+    "role": "Reasoning engine",
+    "alternatives": [
+      "ChatGPT",
+      "Gemini"
+    ],
+    "related": [
+      "Cursor",
+      "Artifacts",
+      "API"
+    ],
+    "tags": [
+      "llm",
+      "anthropic",
+      "assistant"
+    ],
+    "notes": "Explore Claude Sonnet projects and API limits.",
+    "importance": "High",
+    "date": "Today",
+    "viewed": "Just now"
+  },
+  {
     "name": "Wispr Flow",
     "category": "Automation",
     "description": "Wispr Flow connects multi-app triggers and actions into highly reliable automated tasks.",

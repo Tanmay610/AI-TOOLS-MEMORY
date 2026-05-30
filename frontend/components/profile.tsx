@@ -2,7 +2,15 @@ import { useEffect, useState } from "react";
 import { Settings2 } from "lucide-react";
 import { PageHeading } from "./shared";
 
-export function Profile({ onAdd }: { onAdd: () => void }) {
+export function Profile({
+  onAdd,
+  theme,
+  toggleTheme,
+}: {
+  onAdd: () => void;
+  theme: "light" | "dark";
+  toggleTheme: () => void;
+}) {
   const [mounted, setMounted] = useState(false);
   const [settings, setSettings] = useState<Record<string, boolean>>({
     enrichment: true,
@@ -67,7 +75,16 @@ export function Profile({ onAdd }: { onAdd: () => void }) {
             <i />
           </label>
         ))}
-        <button className="secondary-button">
+        <label className="setting">
+          Dark theme mode
+          <input
+            type="checkbox"
+            checked={theme === "dark"}
+            onChange={toggleTheme}
+          />
+          <i />
+        </label>
+        <button className="secondary-button" style={{ marginTop: "22px" }}>
           <Settings2 size={16} /> Manage integrations
         </button>
       </article>

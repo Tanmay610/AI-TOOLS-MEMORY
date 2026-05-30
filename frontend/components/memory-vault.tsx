@@ -45,6 +45,33 @@ export function MemoryVault() {
   const [previewName, setPreviewName] = useState<string | null>(null);
   const [showAdd, setShowAdd] = useState(false);
   const [notification, setNotification] = useState("");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    const storedTheme = window.localStorage.getItem("theme") as "light" | "dark" | null;
+    if (storedTheme) {
+      setTheme(storedTheme);
+      if (storedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    setTheme(nextTheme);
+    window.localStorage.setItem("theme", nextTheme);
+    if (nextTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
 
   useEffect(() => {
     // Load from backend API
@@ -266,6 +293,8 @@ export function MemoryVault() {
           setSearch(value);
           if (value.trim()) setActive("Library");
         }}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
       <main className="workspace">
         <AnimatePresence mode="wait">
@@ -333,7 +362,13 @@ export function MemoryVault() {
                 setShowAdd={setShowAdd}
               />
             )}
-            {active === "Profile" && <Profile onAdd={() => setShowAdd(true)} />}
+            {active === "Profile" && (
+              <Profile
+                onAdd={() => setShowAdd(true)}
+                theme={theme}
+                toggleTheme={toggleTheme}
+              />
+            )}
           </motion.div>
         </AnimatePresence>
       </main>
