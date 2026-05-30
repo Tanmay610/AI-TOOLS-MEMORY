@@ -17,6 +17,7 @@ import { Profile } from "./profile";
 const storageKey = "ai-memory-vault-tools";
 const storedToolsEvent = "ai-memory-vault-updated";
 const emptyStoredTools: Tool[] = [];
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
 let cachedToolsValue = "";
 let cachedTools: Tool[] = emptyStoredTools;
 
@@ -75,7 +76,7 @@ export function MemoryVault() {
 
   useEffect(() => {
     // Load from backend API
-    fetch("http://localhost:3001/api/tools")
+    fetch(`${API_BASE}/api/tools`)
       .then((res) => {
         if (!res.ok) throw new Error("Backend offline");
         return res.json();
@@ -147,7 +148,7 @@ export function MemoryVault() {
     persistTools(nextTools);
 
     if (backendActive) {
-      fetch(`http://localhost:3001/api/tools/${encodeURIComponent(name)}`, {
+      fetch(`${API_BASE}/api/tools/${encodeURIComponent(name)}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(changes),
@@ -167,7 +168,7 @@ export function MemoryVault() {
     persistTools(nextTools);
 
     if (backendActive) {
-      fetch(`http://localhost:3001/api/tools/${encodeURIComponent(toolToDelete.name)}`, {
+      fetch(`${API_BASE}/api/tools/${encodeURIComponent(toolToDelete.name)}`, {
         method: "DELETE",
       })
         .then((res) => {
@@ -207,7 +208,7 @@ export function MemoryVault() {
     }
 
     if (backendActive) {
-      fetch("http://localhost:3001/api/tools", {
+      fetch(`${API_BASE}/api/tools`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: cleanName }),

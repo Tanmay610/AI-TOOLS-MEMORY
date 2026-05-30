@@ -244,6 +244,8 @@ export function ToolPreview({
   );
 }
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+
 export function CaptureModal({
   value,
   setValue,
@@ -273,7 +275,7 @@ export function CaptureModal({
 
     setLoading(true);
     const handler = setTimeout(() => {
-      fetch(`http://localhost:3001/api/suggest?name=${encodeURIComponent(trimmed)}`)
+      fetch(`${API_BASE}/api/suggest?name=${encodeURIComponent(trimmed)}`)
         .then((res) => {
           if (!res.ok) throw new Error("Offline");
           return res.json();
